@@ -3,36 +3,61 @@
     <head>
         <title>Over to the Similian islands to see some fish</title>
         <script>
+            var counter=0;
             alert("Hello folks");
             var firstAnswer = true;
             var userAnswer=confirm("Did I decide to visit the Similian islands at the beginning of my Thailand trip?");
-                 
+                             
             if (userAnswer==firstAnswer) {
                 alert(" Ah no, I was hundreds of miles away from those islands at the beginning of the trip.");
-            } else {alert("Correct, I didn't get down to that part of Thailand until the end of my visit.");}
+            } else {
+                counter++;
+                alert("Correct, I didn't get down to that part of Thailand until the end of my visit.");
+            }
+
             var secondAnswer = true;
                 userAnswer=confirm("Did we experience some turbulance on the boat ride out to the Similian islands?");
                  
             if (userAnswer==secondAnswer) {
+                counter++;
                 alert(" Oh yes, a few people were a little nausiated and frieked out.");
             } else {
-                alert("I wish we had had a smooth trip, but your're wrong.  It was a little rough getting out there.");}
+                
+                alert("I wish we had had a smooth trip, but your're wrong.  It was a little rough getting out there.");
+            }
+
             var thirdAnswer = true;
                 userAnswer=confirm("Did the fish act as if we were a threat and keep a great distance between themselves and us snorkelers?");
                  
             if (userAnswer==thirdAnswer) {
                 alert("Well no.  They knew they were better swimmers than we were.");
             } else {
-                alert("You're right. I learned that those fish definately didn't regard me as king of the ocean.");
+                counter++;
+                alert("You're right. I learned that those fish definately didn't regard me as KING OF THE ANDAMAN SEA.");
             }
             var fourthAnswer = true;
                 userAnswer=confirm("Did the NEMO FISH stop what they were doing and stare at me when I swam up to them?");
                  
             if (userAnswer==fourthAnswer) {
+                counter++;
                 alert("Yes they did.");
             } else {alert("No. Those Clown Fish aren't just going to let you swim up and grab them.");}
 
-            var fifthAnswer = 5;
+            
+            
+               userAnswer=prompt("Did I see some coral while I was snorkeling?");
+                 
+            while (userAnswer != "yes" && userAnswer != "YES" && userAnswer != "Yes") {
+                 (userAnswer==" ")
+                    userAnswer=prompt("Incorrect. Answer again");
+                } if (userAnswer=="yes" || userAnswer=="YES" || userAnswer=="Yes"){
+                counter++;
+                     
+                    alert("You're correct.");
+                }   
+        
+                                      
+            var sixthAnswer = 5;
                 userAnswer=prompt("How many days prior to leaving Thailand did I go snorkeling?");
 
             while (userAnswer!=5) {
@@ -43,13 +68,19 @@
                 }
             }     
             if (userAnswer==5) {
+                counter++;
                 alert("You're correct.");
-             
-            }  
-           
+            }
+            
+            var str1="You've answered ";
+            var str2=" of my questions correctly";
+            var result=str1.concat(counter,str2);
+        
+                alert(result);
+               
               
-
-             
+                  
+                                                  
                
         </script>
     </head>
